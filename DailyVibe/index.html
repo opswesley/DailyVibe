@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodTrack</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MoodTrack</h1>
+            <nav>
+                <ul>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#history">Histórico</a></li>
+                    <li><a href="#insights">Insights</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <h3>Registro Diário</h3>
+                <div class="mood-options">
+                    <button class="mood-btn" data-mood="excited"><img src="emojis/excited.gif" alt="Excited" class="mood-gif"></button>
+                    <button class="mood-btn" data-mood="happy"><img src="emojis/happy.gif" alt="Happy" class="mood-gif"></button>
+                    <button class="mood-btn" data-mood="neutral"><img src="emojis/neutral.gif" alt="Neutral" class="mood-gif"></button>
+                    <button class="mood-btn" data-mood="sad"><img src="emojis/sad.gif" alt="Sad" class="mood-gif"></button>
+                </div>
+                <textarea id="notes" placeholder="O que está influenciando seu humor?"></textarea>
+                
+                <div class="extra-options">
+                    <label><input type="checkbox" id="music-check"> Conheceu uma música nova?</label>
+                    <input type="text" id="music" placeholder="Qual música?" class="extra-input" style="display: none;">
+                    
+                    <label><input type="checkbox" id="trip-check"> Fez uma viagem nova?</label>
+                    <input type="text" id="trip" placeholder="Para onde?" class="extra-input" style="display: none;">
+                    
+                    <label><input type="checkbox" id="food-check"> Experimentou uma comida nova?</label>
+                    <input type="text" id="food" placeholder="Qual comida?" class="extra-input" style="display: none;">
+                    
+                    <label><input type="checkbox" id="book-check"> Leu um livro novo?</label>
+                    <input type="text" id="book" placeholder="Qual livro?" class="extra-input" style="display: none;">
+                    
+                    <label><input type="checkbox" id="film-check"> Assistiu a um filme novo?</label>
+                    <input type="text" id="film" placeholder="Qual filme?" class="extra-input" style="display: none;">
+                    
+                    <label><input type="checkbox" id="game-check"> Jogou um jogo novo?</label>
+                    <input type="text" id="game" placeholder="Qual jogo?" class="extra-input" style="display: none;">
+                    
+                    <label><input type="checkbox" id="sport-check"> Praticou um esporte novo?</label>
+                    <input type="text" id="sport" placeholder="Qual esporte?" class="extra-input" style="display: none;">
+                </div>
+                <button id="save-btn">Salvar</button>
+            </aside>
+
+            <main class="dashboard">
+                <h2>Sua Semana</h2>
+                <canvas id="mood-chart"></canvas>
+                <div id="insights"></div>
+                <div id="history"></div>
+            </main>
+        </div>
+
+        <footer>
+            <p>Desenvolvido por <a href="https://github.com/opswesley" target="_blank">opswesley</a></p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
